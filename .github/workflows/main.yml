@@ -1,0 +1,22 @@
+name: Update 🛌 Pillow data
+
+on:
+  schedule:
+    - cron: "0 16 * * *"
+
+jobs:
+  request-update-data:
+    name: update pillow data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Run bash script
+        run: sh run.sh
+        env:
+          RESULT_FOLDER_ID: ${{ secrets.RESULT_FOLDER_ID }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          CREDENTIALS: ${{ secrets.CREDENTIALS }}
+          SOURCE_FOLDER_ID: ${{ secrets.SOURCE_FOLDER_ID }}
