@@ -2,7 +2,7 @@ name: Update 🛌 Pillow data
 
 on:
   schedule:
-    - cron: "0 16 * * *"
+    - cron: "0 5 * * *"
 
 jobs:
   request-update-data:
