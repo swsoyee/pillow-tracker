@@ -1,3 +1,4 @@
+pip3 install setuptools
 pip3 install -r requirements.txt
 echo $CREDENTIALS >> credentials.json
 echo client_config:'\n  'client_id: $CLIENT_ID'\n  'client_secret: $CLIENT_SECRET >> settings.yaml
