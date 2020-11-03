@@ -35,7 +35,7 @@ def getDictFromString(string):
     return row
 
 
-filename = 'data-raw/PillowData.txt'
+filename = 'PillowData.txt'
 
 reading_table = None
 dataframes = {}
